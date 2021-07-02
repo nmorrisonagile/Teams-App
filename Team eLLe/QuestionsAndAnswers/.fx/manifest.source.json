@@ -29,30 +29,30 @@
             "botId": "{botId}",
             "commands": [
                 {
-                    "id": "createCard",
+                    "id": "createCard2",
                     "context": [
                         "compose"
                     ],
                     "description": "Command to run action to create a Card from Compose Box",
-                    "title": "Create Card",
+                    "title": "Leave applicatioon",
                     "type": "action",
                     "parameters": [
                         {
-                            "name": "title",
-                            "title": "Card title",
-                            "description": "Title for the card",
-                            "inputType": "text"
+                            "name": "fromDate",
+                            "title": "From Date",
+                            "description": "Start date of leave",
+                            "inputType": "date"
                         },
                         {
-                            "name": "subTitle",
-                            "title": "Subtitle",
-                            "description": "Subtitle for the card",
-                            "inputType": "text"
+                            "name": "toDate",
+                            "title": "To date",
+                            "description": "End date of leave",
+                            "inputType": "date"
                         },
                         {
                             "name": "text",
                             "title": "Text",
-                            "description": "Text for the card",
+                            "description": "Reason of leave",
                             "inputType": "textarea"
                         }
                     ]

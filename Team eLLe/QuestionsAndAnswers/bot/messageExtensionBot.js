@@ -1,12 +1,12 @@
 const axios = require("axios");
 const querystring = require("querystring");
-const { TeamsActivityHandler, CardFactory } = require("botbuilder");
+const { TeamsActivityHandler, CardFactory, TeamsInfo } = require("botbuilder");
 
 class MessageExtensionBot extends TeamsActivityHandler {
   // Action.
   handleTeamsMessagingExtensionSubmitAction(context, action) {
     switch (action.commandId) {
-      case "createCard":
+      case "createCard2":
         return createCardCommand(context, action);
       case "shareMessage":
         return shareMessageCommand(context, action);
@@ -74,9 +74,9 @@ class MessageExtensionBot extends TeamsActivityHandler {
 }
 
 function createCardCommand(context, action) {
-  // The user has chosen to create a card by choosing the 'Create Card' context menu command.
+
   const data = action.data;
-  const heroCard = CardFactory.heroCard(data.fromDate+"-"+data.toDate+": "+data.text);
+  const heroCard = CardFactory.heroCard("Leave request","Start:"+data.fromDate+" Ends:"+data.toDate+" Reason:"+data.text);
   heroCard.content.subtitle = data.subTitle;
   const attachment = {
     contentType: heroCard.contentType,

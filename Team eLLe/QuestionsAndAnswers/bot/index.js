@@ -5,7 +5,7 @@ const express = require("express");
 
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
 const { BotFrameworkAdapter } = require("botbuilder");
-
+//const { TeamsActivityHandler, TeamsInfo, TurnContext } = require("botbuilder");
 const { MessageExtensionBot } = require("./messageExtensionBot.js");
 
 // Create adapter.
@@ -44,8 +44,14 @@ server.listen(port, () => console.log(`\Bot/ME service listening at https://loca
 
 // Listen for incoming requests.
 server.post("/api/messages", (req, res) => {
+  
   adapter.processActivity(req, res, async (context) => {
+    
+  
     // Process bot activity
     await messageExtensionBot.run(context);
+  
+  
+  
   });
 });
