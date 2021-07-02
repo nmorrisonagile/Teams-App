@@ -76,7 +76,7 @@ class MessageExtensionBot extends TeamsActivityHandler {
 function createCardCommand(context, action) {
   // The user has chosen to create a card by choosing the 'Create Card' context menu command.
   const data = action.data;
-  const heroCard = CardFactory.heroCard(data.title, data.text);
+  const heroCard = CardFactory.heroCard(data.fromDate+"-"+data.toDate+": "+data.text);
   heroCard.content.subtitle = data.subTitle;
   const attachment = {
     contentType: heroCard.contentType,
