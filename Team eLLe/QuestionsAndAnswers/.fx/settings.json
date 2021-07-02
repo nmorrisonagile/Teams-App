@@ -1,0 +1,19 @@
+{
+    "appName": "QuestionsAndAnswers",
+    "projectId": "966768a1-9d07-4242-9b63-2557317f59c3",
+    "currentEnv": "default",
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "capabilities": [
+            "MessagingExtension"
+        ],
+        "azureResources": [],
+        "activeResourcePlugins": [
+            "fx-resource-local-debug",
+            "fx-resource-bot",
+            "fx-resource-aad-app-for-teams"
+        ]
+    }
+}
